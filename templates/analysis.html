@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+  <script>
+    zingchart.MODULESDIR = "https://cdn.zingchart.com/modules/";
+    ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "ee6b7db5b51705a13dc2339db3edaf6d"];
+  </script>
+  <style></style>
+	<meta charset="utf-8">
+
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!-- Font-->
+	<link rel="stylesheet" type="text/css" href="static/css/opensans-font.css">
+	<link rel="stylesheet" type="text/css" href="static/fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
+	<!-- Main Style Css -->
+    <link rel="stylesheet" href="static/css/style1.css"/>
+
+    <link rel="stylesheet" type="text/css" href="static/css/util.css">
+    <style type="text/css">
+    table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+    	.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #4fab40;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 18px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+.flip-card {
+  margin: 20px;
+  background-color: transparent;
+  width: 200px;
+  height: 200px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+  z-index: 2;
+}
+
+.flip-card-back {
+  background-color: #fff;
+  color: black;
+  transform: rotateY(180deg);
+  z-index: 1;
+}
+
+    </style>
+</head>
+<body>
+	<div class="page-content">
+		<div class="form-v1-content" style="">
+			<div class="wizard-form">
+		        <form class="form-register" action="#" method="post">
+		        	<div id="form-total" style="">
+		        		<!-- SECTION 1 -->
+			            <h2>
+			            	<p class="step-icon"><span>01</span></p>
+			            	<span class="step-text">Predicted Score</span>
+			            </h2>
+			            <section>
+			                <div class="wizard-header">
+									<h4 class="heading">RESULT</h4>
+									<p><h3> Predicted GPA is :{{ result_prediction }}</h3></p>
+								</div>
+			            </section>
+						<!-- SECTION 2 -->
+			             <h2>
+			            	<p class="step-icon"><span>02</span></p>
+			            	<span class="step-text">Your Marks</span>
+
+			            </h2>
+			           <section>
+                       <table style="margin:20px;width:90%;height: 60% ">
+  <tr>
+    <th >Subjects</th>
+    <th>Theory Marks</th>
+    <th>Average Term Test</th>
+    <th> Term Work </th>
+    <th> Viva Marks </th>
+  </tr>
+
+  <tr>
+  	<th>Applied Mathematics</th>
+  	<td>{{AM_TH}}</td>
+  	<TD>{{AM_TT}}</TD>
+  	<TD>{{AM_TW}}</TD>
+  	<TD>NA</TD>
+  </tr>
+  <tr>
+  	<th>Applied Physics</th>
+  	<td>{{AP_TH}}</td>
+  	<TD>{{AP_TT}}</TD>
+  	<TD>{{AP_TW}}</TD>
+  	<TD>NA</TD>
+  </tr>
+  <tr>
+  	<th>Applied Chemistry</th>
+  	<td>{{AC_TH}}</td>
+  	<TD>{{AC_TT}}</TD>
+  	<TD>{{AC_TW}}</TD>
+  	<TD>NA</TD>
+  </tr>
+  <tr>
+<th>Engineering Mechanics</th>
+<td>{{M_TH}}</td>
+  	<TD>{{M_TT}}</TD>
+  	<TD>{{M_TW}}</TD>
+  	<TD>{{M_V}}</TD>
+  </tr>
+  <tr>
+<th>Basic Electrical Engineering</th>
+<td>{{BEE_TH}}</td>
+  	<TD>{{BEE_TT}}</TD>
+  	<TD>{{BEE_TW}}</TD>
+  	<TD>{{BEE_V}}</TD>
+  </tr>
+
+ <tr>
+ 	
+ 		<th>Environmental Studies ( E V S)</th>
+ 		<td>{{EVS_TH}}</td>
+  	<TD>{{EVS_TT}}</TD>
+  	<TD>NA</TD>
+  	<TD>NA</TD>
+ 	</tr>
+ 	<tr>
+ 		<th>Basic Workshop Practice</th>
+ 		<td>NA</td>
+  	<TD>NA</TD>
+  	<TD>{{W_TW}}</TD>
+  	<TD>NA</TD>
+ 	</tr>
+</table>
+			           </section>
+		        	</div>
+		        </form>
+			</div>
+		</div>
+	</div>
+	<script src="static/js/jquery-3.3.1.min.js"></script>
+	<script src="static/js/jquery.steps.js"></script>
+	<script src="static/js/main1.js"></script>
+
+
+</body>
+</html>

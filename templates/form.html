@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!-- Font-->
+	<link rel="stylesheet" type="text/css" href="static/css/opensans-font.css">
+	<link rel="stylesheet" type="text/css" href="static/fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
+	<!-- Main Style Css -->
+    <link rel="stylesheet" href="static/css/style1.css"/>
+  
+    <link rel="stylesheet" type="text/css" href="static/css/util.css">
+    <style type="text/css">
+    	.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #4fab40;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 18px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+    </style>
+</head>
+<body>
+	<div class="page-content">
+		<div class="form-v1-content">
+			<div class="wizard-form">
+		        <form class="form-register" action="" method="post">
+		        	<div id="form-total">
+		        		<!-- SECTION 1 -->
+			            <h2>
+			            	<p class="step-icon"><span>01</span></p>
+			            	<span class="step-text">Applied Mathematics - I</span>
+			            </h2>
+			            <section>
+			                <div class="inner">
+			                	<div class="wizard-header">
+									<h3 class="heading">Applied Mathematics - I</h3>
+									<p>Please enter your infomation and proceed to the next step so we can calculate the result.  </p>
+								</div>
+								<div class="form-row">
+									<div class="form-holder">
+										<fieldset>
+					
+											<input type="text" class="form-control"  name="AM_TH" placeholder="Theory Marks" min="32" max="80" required>
+										</fieldset>
+									</div>
+									
+								</div>
+								<div class="form-row">
+									<div class="form-holder">
+										<fieldset>
+					
+											<input type="text" class="form-control"  name="AM_TT" placeholder="Average Term Test Marks" min="7" max="20" required>
+										</fieldset>
+									</div>
+									
+								</div>
+								<div class="form-row">
+									<div class="form-holder">
+										<fieldset>
+					
+											<input type="text" class="form-control"  name="AM_TW" placeholder="Term Work" min="7" max="20" required>
+										</fieldset>
+									</div>
+									
+								</div>
+								
+							</div>
+			            </section>
+						<!-- SECTION 2 -->
+			             <h2>
+			            	<p class="step-icon"><span>02</span></p>
+			            	<span class="step-text">Applied Physics - I</span>
+			            </h2>
+			            <section>
+			                <div class="inner">
+			                	<div class="wizard-header">
+									<h3 class="heading">Applied Physics - I</h3>
+									<p> Please enter your infomation and proceed to the next step so we can calculate the result.</p>
+								</div>
+								<div class="form-row">
+									<div class="form-holder">
+										<fieldset>
+					
+											<input type="text" class="form-control"  name="AP_TH" placeholder="Theory Marks"  min="24" max="60" required>
+										</fieldset>
+									</div>
+									
+								</div>
+								<div class="form-row">
+									<div class="form-holder">
+										<fieldset>
+					
+											<input type="text" class="form-control"  name="AP_TT" placeholder="Average Term Test Marks" min="7" max="20" required>
+										</fieldset>
+									</div>
+									
+								</div>
+								<div class="form-row">
+									<div class="form-holder">
+										<fieldset>
+					
+											<input type="text" class="form-control"  name="AP_TW" placeholder="Term Work" min="7" max="20" required>
+										</fieldset>
+									</div>
+									
+								</div>
+								
+							</div>
+			            </section>
+			            <!-- SECTION 3 -->
+			            <h2>
+			            	<p class="step-icon"><span>03</span></p>
+			            	<span class="step-text">Applied Chemistry - I</span>
+			            </h2>
+			            <section>
+			               <div class="inner">
+			                	<div class="wizard-header">
+									<h3 class="heading">Applied Chemistry - I</h3>
+									<p> Please enter your infomation and proceed to the next step so we can calculate the result.</p>
+								</div>
+								<div class="form-row">
+									<div class="form-holder">
+										<fieldset>
+					
+											<input type="text" class="form-control"  name="AC_TH" placeholder="Theory Marks"  min="24" max="60" required>
+										</fieldset>
+									</div>
+									
+								</div>
+								<div class="form-row">
+									<div class="form-holder">
+										<fieldset>
+					
+											<input type="text" class="form-control"  name="AC_TT" placeholder="Average Term Test Marks" min="7" max="20" required>
+										</fieldset>
+									</div>
+									
+								</div>
+								<div class="form-row">
+									<div class="form-holder">
+										<fieldset>
+					
+											<input type="text" class="form-control"  name="AC_TW" placeholder="Term Work" min="7" max="20" required>
+										</fieldset>
+									</div>
+									
+								</div>
+								
+							</div>
+			            </section>
+
+
+			            <!-- SECTION 4 -->
+			            <h2>
+			            	<p class="step-icon"><span>04</span></p>
+			            	<span class="step-text">Engineering Mechanics</span>
+			            </h2>
+			            <section>
+			               <div class="inner">
+			                	<div class="wizard-header">
+									<h3 class="heading">Engineering Mechanics</h3>
+									<p> Please enter your infomation and proceed to the next step so we can calculate the result.</p>
+								</div>
+								<div class="form-row">
+									<div class="form-holder">
+										<fieldset>
+					
+											<input type="text" class="form-control"  name="M_TH" placeholder="Theory Marks"  min="32" max="80" required>
+										</fieldset>
+									</div>
+									
+								</div>
+								<div class="form-row">
+									<div class="form-holder">
+										<fieldset>
+					
+											<input type="text" class="form-control"  name="M_TT" placeholder="Average Term Test Marks" min="7" max="20" required>
+										</fieldset>
+									</div>
+									
+								</div>
+								<div class="form-row">
+									<div class="form-holder">
+										<fieldset>
+					
+											<input type="text" class="form-control"  name="M_TW" placeholder="Term Work" min="7" max="20" required>
+										</fieldset>
+									</div>
+									
+								</div>
+								<div class="form-row">
+									<div class="form-holder">
+										<fieldset>
+					
+											<input type="text" class="form-control"  name="M_V" placeholder="Oral Marks" required>
+										</fieldset>
+									</div>
+									
+								</div>
+							</div>
+			            </section>
+
+                        <!-- SECTION 5 -->
+			            <h2>
+			            	<p class="step-icon"><span>05</span></p>
+			            	<span class="step-text">Basic Electrical Engineering</span>
+			            </h2>
+			            <section>
+			               <div class="inner">
+			                	<div class="wizard-header">
+									<h3 class="heading">Basic Electrical Engineering</h3>
+									<p> Please enter your infomation and proceed to the next step so we can calculate the result.</p>
+								</div>
+								<div class="form-row">
+									<div class="form-holder">
+										<fieldset>
+					
+											<input type="text" class="form-control"  name="BEE_TH" placeholder="Theory Marks"  min="32" max="80" required>
+										</fieldset>
+									</div>
+									
+								</div>
+								<div class="form-row">
+									<div class="form-holder">
+										<fieldset>
+					
+											<input type="text" class="form-control"  name="BEE_TT" placeholder="Average Term Test Marks" min="7" max="20" required>
+										</fieldset>
+									</div>
+									
+								</div>
+								<div class="form-row">
+									<div class="form-holder">
+										<fieldset>
+					
+											<input type="text" class="form-control"  name="BEE_TW" placeholder="Term Work" min="7" max="20" required>
+										</fieldset>
+									</div>
+									
+								</div>
+								<div class="form-row">
+									<div class="form-holder">
+										<fieldset>
+					
+											<input type="text" class="form-control"  name="BEE_V" placeholder="Oral Marks" min="7" max="20" required>
+										</fieldset>
+									</div>
+									
+								</div>
+							</div>
+			            </section>
+
+
+                        <!-- SECTION 6 -->
+			            <h2>
+			            	<p class="step-icon"><span>06</span></p>
+			            	<span class="step-text">Environmental Studies ( E V S)</span>
+			            </h2>
+			            <section>
+			               <div class="inner">
+			                	<div class="wizard-header">
+									<h3 class="heading">Environmental Studies ( E V S)</h3>
+									<p> Please enter your infomation and proceed to the next step so we can calculate the result.</p>
+								</div>
+								<div class="form-row">
+									<div class="form-holder">
+										<fieldset>
+					
+											<input type="text" class="form-control"  name="EVS_TH" placeholder="Theory Marks"  min="32" max="80" required>
+										</fieldset>
+									</div>
+									
+								</div>
+								<div class="form-row">
+									<div class="form-holder">
+										<fieldset>
+					
+											<input type="text" class="form-control"  name="EVS_TT" placeholder="Average Term Test Marks" min="7" max="20" required>
+										</fieldset>
+									</div>
+									
+								</div>
+							
+							
+							</div>
+			            </section>
+
+                        <!-- SECTION 7 -->
+			            <h2>
+			            	<p class="step-icon"><span>07</span></p>
+			            	<span class="step-text">Basic Workshop Practice - I</span>
+			            </h2>
+			            <section>
+			               <div class="inner">
+			                	<div class="wizard-header">
+									<h3 class="heading">Basic Workshop Practice - I</h3>
+									<p> Please enter your infomation and proceed to the next step so we can calculate the result.</p>
+								</div>
+								
+								<div class="form-row">
+									<div class="form-holder">
+										<fieldset>
+					
+											<input type="text" class="form-control"  name="W_TW" placeholder="Term Work"  min="24" max="60" required>
+										</fieldset>
+									</div>
+									
+								</div>
+							
+						<button class="button" style="vertical-align:middle" formaction="{{ url_for('analysis')}}"><span>Predict the GPA </span></button>
+							</div>
+			            </section>
+
+
+		        	</div>
+		        </form>
+			</div>
+		</div>
+	</div>
+	<script src="static/js/jquery-3.3.1.min.js"></script>
+	<script src="static/js/jquery.steps.js"></script>
+	<script src="static/js/main1.js"></script>
+
+
+</body>
+</html>
